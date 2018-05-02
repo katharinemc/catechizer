@@ -33,18 +33,6 @@ const cateApp = (function () {
 
   };
 
-
-  // Submits via button - works for single inputs
-
-//NEXT STEPS:
-// 1. count inputs
-// 2. store vals
-// 3. make string and compare
-
-// OR - 1) detect question number from an HTML id;
-// 2) Pull "number of inputs" property from STORE object
-// 3) store appropriate value(s), stringify and compare
-
   const subsequentClicks = function () {
     $('.question-section').on ('click', '.js-answerclick', function(event){
       console.log('subsequent click!');
@@ -59,7 +47,7 @@ const cateApp = (function () {
         userAnswerArray.push($(this).val());
       }); 
 
-      console.log(userAnswerArray.join(', '), currentQuestion.userAnswer);
+      console.log(`InputAnswer ${userAnswerArray.join(', ')}, provided answer ${currentQuestion.userAnswer}`);
 
       if(userAnswerArray.join(', ') === currentQuestion.userAnswer){
      

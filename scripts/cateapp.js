@@ -53,18 +53,19 @@ const cateApp = (function () {
       const paraID = parseInt($(ourButton).siblings('p').attr('id'));
       let currentQuestion =  catechesis.allQuestions.find(questions => questions.id ===paraID);
   
-      $(':input').each( input => { 
-        let answer = $(this).val();
-        let order = $('input').data('id');
-        console.log(order);
-        if (!currentQuestion.answer[order-1] === answer){
-          console.log('you fail!');
-        } else {
-          console.log('right answer!');
-          $(ourButton).parent('.question-section').html(makeQuestion(paraID));
-        }
-      });
-      
+
+      var userAnswerArray = new Array();
+      $('.answerInput').each(function () {
+        userAnswerArray.push($(this).val());
+      }); 
+
+      if(userAnswerArray === currentQuestion.userAnswerArray){
+        console.log('correct answer!');
+        $(ourButton).parent('.question-section').html(makeQuestion(paraID));
+      } else {
+        console.log('wrong answer');
+      }
+     
 
     });};
       

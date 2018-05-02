@@ -59,7 +59,10 @@ const cateApp = (function () {
         userAnswerArray.push($(this).val());
       }); 
 
-      if(userAnswerArray === currentQuestion.userAnswerArray){
+      console.log(userAnswerArray.join(', '), currentQuestion.userAnswer);
+
+      if(userAnswerArray.join(', ') === currentQuestion.userAnswer){
+     
         console.log('correct answer!');
         $(ourButton).parent('.question-section').html(makeQuestion(paraID));
       } else {

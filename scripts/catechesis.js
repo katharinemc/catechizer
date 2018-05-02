@@ -7,6 +7,7 @@ const catechesis = {
       question: 'Who made the world?',
       fullAnswer: 'God',
       answer:'God',
+      answerType: 'singleInput',
       answerLiteral: '<input type="text">'
     },
     
@@ -14,8 +15,9 @@ const catechesis = {
       id: 2,
       question: 'Who is God?',
       fullAnswer: 'God is the Creator of heaven and earth and of all things',
-      answer: 'all things',
-      answerLiteral: 'God is the Creator of heaven and earth and of <input type="text">' 
+      answer: ['heaven', 'earth', 'all things'],
+      answerType: 'threeInput',
+      answerLiteral: 'God is the Creater of <input data-id="1" type="text"> and <input data-id="2" type="text">, and of all <input data-id="3" type="text">'
     },{
       id: 3,
       question: 'What is man?',

@@ -19,5 +19,5 @@
       
     }
 
-     <input type="radio" name="answer" id="answerTwo"><label for="answerTwo">"I have no idea"</label> `,
+    
       futureAnswer: 'God is the Creater of <input type="text"> and <input type="text">, and of all <input type="text">'

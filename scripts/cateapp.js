@@ -5,8 +5,7 @@
 const cateApp = (function () {
 
   let allQuestions = catechesis.allQuestions;
-  console.log(allQuestions);
-    
+
   const initialClick = function () {
     $('.regular').on ('click', '.js-click', function(event){
       console.log('initialclick');
@@ -47,7 +46,8 @@ const cateApp = (function () {
 
     });};
 
-  const goodJob = function (paraID) {
+  
+    const goodJob = function (paraID) {
 
     return `      <div class="correct">
       <p id="${paraID}">Good job!  Shall we continue?</p>
@@ -90,9 +90,8 @@ const cateApp = (function () {
     console.log('Im in bad!');
     return `      <div class="wrong">
     <p id="${paraID}">Uh-oh! Wrong answer.  Would you like to try again?</p>
-
-  <button class="js-returnQuestion">Yes Please!</button>
-  </div>
+    <button class="js-returnQuestion">Yes Please!</button>
+    </div>
     `;
   };
   

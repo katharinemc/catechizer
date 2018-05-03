@@ -42,6 +42,11 @@ box-shadow:         2px 4px 8px rgba(50, 50, 50, 0.75);
   margin: 0 auto;
 }
 
+.correct {
+  border: 5px solid #5cb85c;
+  background-color: #5cb85c;
+  padding: 15%;
+}
 
 footer  {
   position: fixed;
@@ -77,24 +82,9 @@ header {
   font-size: 1.25em;
 }
 
-/* input[type=text] {
-  width: 66%;
-  padding: 3%;
-  border-radius: 13px;
-  border: 1px solid black;
-  margin: 3%;
-  display: inline;
-  font-size: inherit;
-   line-height: 1.42857143;
-} */
-
-
 input[type=button] {
-
   display: inline;
- 
-}
-
+ }
 
 main {
   width: 66%;
@@ -105,14 +95,17 @@ main {
 
 .question-section {
 border: 5px solid orange;
-padding: 15%;
+
 }
+
+.regular {
+  padding: 15%;
+}
+
 .results {
   width: 66%;
   margin: 0 auto;
 }
-
-
 
 #word {
   border-radius: 13px;
@@ -129,6 +122,12 @@ padding: 15%;
 
 #word:after {
   content: close-quote;
+}
+
+.wrong {
+  background-color: #d9534f;
+  border: 5px solid #d9534f;
+  padding: 15%;
 }
 
 /*COLORS*/

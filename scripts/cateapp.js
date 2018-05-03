@@ -8,20 +8,21 @@ const cateApp = (function () {
   console.log(allQuestions);
     
   const initialClick = function () {
-    $('.question-section').on ('click', '.js-click', function(event){
-    // $( '.js-click').on ('click', function(event){
+    $('.regular').on ('click', '.js-click', function(event){
+      console.log('initialclick');
+      // $( '.js-click').on ('click', function(event){
       event.preventDefault();
 
       let ourButton = event.currentTarget;
       const paraID = $(ourButton).siblings('p').attr('id');
-      $(ourButton).parent('.question-section').html(makeQuestion(paraID));
+      const advancedID = parseInt(paraID)+1;
+      $(ourButton).closest('.question-section').html(makeQuestion(advancedID));
   
     });
   };
  
   const questionClicks = function () {
     $('.question-section').on ('click', '.js-answerclick', function(event){
-      console.log('subsequent click!');
       event.preventDefault();
       let ourButton = event.currentTarget;
       const paraID = parseInt($(ourButton).siblings('p').attr('id'));
@@ -38,16 +39,15 @@ const cateApp = (function () {
       if(userAnswerArray.join(', ') === currentQuestion.userAnswer){
      
         console.log('correct answer!');
-        $(ourButton).parent('.question-section').html(goodJob(paraID));
+        $(ourButton).closest('.question-section').html(goodJob(paraID));
       } else {
-        console.log('wrong answer');
+        $(ourButton).closest('.question-section').html(badJob(paraID));
       }
      
 
     });};
 
   const goodJob = function (paraID) {
-    console.log('Im in goodJob!');
 
     return `      <div class="correct">
       <p id="${paraID}">Good job!  Shall we continue?</p>
@@ -64,27 +64,55 @@ const cateApp = (function () {
 
       let ourButton = event.currentTarget;
       const paraID = $(ourButton).siblings('p').attr('id');
-      $(ourButton).closest('.question-section').html(makeQuestion(paraID));
+      const advancedID = parseInt(paraID)+1;
+      console.log(advancedID);
+      $(ourButton).closest('.question-section').html(makeQuestion(advancedID));
   
     });
   };
 
-  const makeQuestion = function (paraID) {
-    let newID = parseInt(paraID)+1;
-    let newQuestion = catechesis.allQuestions.find(questions => questions.id === newID);
-    catechesis.currentQuestion = newID;
-    return `<p id="${newID}">${newQuestion.question}</p>
+  const makeQuestion = function (advancedID) {
+  
+    let newQuestion = catechesis.allQuestions.find(questions => questions.id === advancedID);
+
+    return `
+    <div class="regular">
+    <p id="${advancedID}">${newQuestion.question}</p>
 
     <form id="userInputs">  
     ${newQuestion.answerLiteral}
     </form>
-    <button type ="submit" class="js-answerclick">Submit Answer</button>`;
+    <button type ="submit" class="js-answerclick">Submit Answer</button>
+    </div>`;
   };   
+
+  const badJob = function (paraID) {
+    console.log('Im in bad!');
+    return `      <div class="wrong">
+    <p id="${paraID}">Uh-oh! Wrong answer.  Would you like to try again?</p>
+
+  <button class="js-returnQuestion">Yes Please!</button>
+  </div>
+    `;
+  };
+  
+  const returnQuestion = function () {
+    $('.question-section').on ('click', '.js-returnQuestion', function(event){
+      console.log('return Question triggered');
+      event.preventDefault();
+
+      let ourButton = event.currentTarget;
+      const paraID = parseInt($(ourButton).siblings('p').attr('id'));
+      console.log(paraID);
+      $(ourButton).closest('.question-section').html(makeQuestion(paraID));
+    });
+  };
 
   const bindEventListeners = function () {
     initialClick();
     questionClicks();
     advanceQuestion();
+    returnQuestion();
   };
 
 

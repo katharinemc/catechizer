@@ -103,7 +103,10 @@ main {
   padding: 3%;
 }
 
-
+.question-section {
+border: 5px solid orange;
+padding: 15%;
+}
 .results {
   width: 66%;
   margin: 0 auto;

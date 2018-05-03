@@ -2,6 +2,8 @@
 
 'use strict';
 
+
+
 const cateApp = (function () {
 
   let allQuestions = catechesis.allQuestions;
@@ -26,28 +28,37 @@ const cateApp = (function () {
       let ourButton = event.currentTarget;
       const paraID = parseInt($(ourButton).siblings('p').attr('id'));
       let currentQuestion =  catechesis.allQuestions.find(questions => questions.id ===paraID);
-  
+      let userAnswer;
+   
 
-      var userAnswerArray = new Array();
-      $('.answerInput').each(function () {
-        userAnswerArray.push($(this).val());
-      }); 
 
-      console.log(`InputAnswer ${userAnswerArray.join(', ')}, provided answer ${currentQuestion.userAnswer}`);
+      if(currentQuestion.questionType === 'text') {
+        var userAnswerArray = new Array();
+        $('.answerInput').each(function () {
+          userAnswerArray.push($(this).val());
+          userAnswer=userAnswerArray.join(', ');
+        }); 
+      } 
+      
+      
+      else if (currentQuestion.questionType === 'multiplechoice') {
+        userAnswer = parseInt($('input[name=answergroup]:checked').val());
+      }
+      console.log(typeof userAnswer, typeof currentQuestion.userAnswer);
 
-      if(userAnswerArray.join(', ') === currentQuestion.userAnswer){
-     
+      if(userAnswer=== currentQuestion.userAnswer){
         console.log('correct answer!');
         $(ourButton).closest('.question-section').html(goodJob(paraID));
       } else {
         $(ourButton).closest('.question-section').html(badJob(paraID));
       }
+
      
 
     });};
 
   
-    const goodJob = function (paraID) {
+  const goodJob = function (paraID) {
 
     return `      <div class="correct">
       <p id="${paraID}">Good job!  Shall we continue?</p>

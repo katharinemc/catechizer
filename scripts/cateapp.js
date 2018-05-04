@@ -70,7 +70,7 @@ const cateApp = (function () {
     return ` 
       <p id="${paraID}">Good job!  Shall we continue?</p>
 
-    <button class="js-advanceQuestion">Yes Please!</button>
+    <button class="js-advanceQuestion advanceQuestion">Yes Please!</button>
    
       `;
   };
@@ -110,7 +110,7 @@ const cateApp = (function () {
     console.log('Im in bad!');
     return `      
     <p id="${paraID}">Uh-oh! Wrong answer.  Would you like to try again?</p>
-    <button class="js-returnQuestion">Yes Please!</button>
+    <button class="js-returnQuestion returnQuestion">Yes Please!</button>
 
     `;
   };

@@ -36,7 +36,7 @@ const cateApp = (function () {
         var userAnswerArray = new Array();
         $('.answerInput').each(function () {
           userAnswerArray.push($(this).val());
-          userAnswer=userAnswerArray.join(', ');
+          userAnswer=userAnswerArray.join(', ').toLowerCase();
         }); 
       } 
       

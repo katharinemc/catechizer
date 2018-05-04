@@ -9,21 +9,21 @@ html {
   min-height: 100%;
 }
 body {
-  font-size: 20px;
+  font-size: 30px;
   margin: 0;
   min-height: 100%;
-
-
+  font-family: 'Muli', sans-serif;
 }
 
-.button {
-
+button {
+  font-family: 'Rasa', serif;
   border-radius: 13px;
   border: 1px solid black;
   padding: 3%;
   font-size: inherit;
-
-
+  margin: 15% auto;
+  display: block;
+  background-color: gray;
 
 -webkit-box-shadow: 2px 4px 8px rgba(50, 50, 50, 0.75);
 -moz-box-shadow:    2px 4px 8px rgba(50, 50, 50, 0.75);
@@ -48,10 +48,17 @@ box-shadow:         2px 4px 8px rgba(50, 50, 50, 0.75);
   padding: 15%;
 }
 
+.explain {
+  font-size: .75em;
+  text-align: right;
+}
+
 footer  {
   position: fixed;
   bottom: 0;
   width: 100%;
+  font-size: 1.5em;
+  padding: 1%;
 }
 
 footer nav {
@@ -77,9 +84,8 @@ header {
   width: 100%;
   margin: 0 auto;
   padding: 5px;
-  margin-bottom: 30px;
-  font-family: 'Merriweather', serif;
-  font-size: 1.25em;
+
+
 }
 
 input[type=button] {
@@ -87,20 +93,31 @@ input[type=button] {
  }
 
 main {
-  width: 66%;
-  margin: 0 auto;
-  margin: 0 auto 200px auto;
-  padding: 3%;
+width: 100%;
+height: 100%;
+background-image: url("/images/cathedral.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+padding: 5%;
 }
+
 
 .question-section {
-border: 5px solid orange;
+  height: 70%;
+/* background-color: #525252; */
+background-color: rgb(221, 221, 221);
 
+border: 1px solid black;
+opacity: 0.8;
+filter: alpha(opacity=60); /* For IE8 and earlier */
+width: 66%;
+margin: auto auto;
+padding: 5%;
 }
 
-.regular {
+/* .regular {
   padding: 15%;
-}
+} */
 
 .results {
   width: 66%;
@@ -144,6 +161,7 @@ input[type=text] {
 }
 
 footer {
+  font-family: 'Rasa', serif;
   background-color: #838383;
 }
 
@@ -152,8 +170,10 @@ footer a {
 }
 
 header {
+  font-family: 'Cormorant SC', serif;
   background-color: #b4b4b4;
   border: #838383;
+  font-size: 4em;
 }
 
 #word {

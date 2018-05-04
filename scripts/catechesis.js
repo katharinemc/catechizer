@@ -8,7 +8,10 @@ const catechesis = {
       id: 1,
       question: 'Who made the world?',
       fullAnswer: 'God',
-      answerLiteral: '<input type="text" class="answerInput" >',
+      answerLiteral: `<div class="answerBlock">
+      <input type="text" class="answerInput" >
+      </div>
+      `,
       userAnswer:'god',
       questionType: 'text'
     },
@@ -18,13 +21,17 @@ const catechesis = {
       question: 'Who is God?',
       fullAnswer: 'God is the Creator of heaven and earth and of all things',
       userAnswer: 'heaven, earth, all things',
-      answerLiteral: 'God is the Creator of <input id="1" class="answerInput" type="text"> and <input id="2" class="answerInput"  type="text">, and of  <input id="3" class="answerInput"  type="text">.',
+      answerLiteral: `<div class="answerBlock">
+      God is the Creator of <input id="1" class="answerInput" type="text"> and <input id="2" class="answerInput"  type="text">, and of  <input id="3" class="answerInput"  type="text">.
+      </div>`
+      ,
       questionType: 'text'},
     {
       id: 3,
       question: 'What is man?',
       fullAnswer: 'Man is a creature composed of body and soul, and made to the image and likeness of God.',
-      answerLiteral: `<div class="answerBlock">Man is a creature composed of [ _________], and made to [ _________]. : <br>
+      answerLiteral: `<div class="answerBlock">
+      Man is a creature composed of [ _________], and made to [ _________]. : <br>
       <input class="answerInput" type="radio" id="answer1" value="1" name="answergroup">
      <label for="answer1">atoms, do good deeds</label><br>
     
@@ -37,6 +44,7 @@ const catechesis = {
 
      <input class="answerInput" type="radio" id="answer4" value="4" name="answergroup">
      <label for="answer4">thoughts, his personal best</label> <br>
+     </div>
      `,
       userAnswer: 3,
       questionType: 'multiplechoice'

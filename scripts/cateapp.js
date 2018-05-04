@@ -17,13 +17,14 @@ const cateApp = (function () {
       let ourButton = event.currentTarget;
       const paraID = $(ourButton).siblings('p').attr('id');
       const advancedID = parseInt(paraID)+1;
-      $(ourButton).closest('.question-section').html(makeQuestion(advancedID));
+      $(ourButton).closest('.js-qs').html(makeQuestion(advancedID));
   
     });
   };
  
   const questionClicks = function () {
-    $('.question-section').on ('click', '.js-answerclick', function(event){
+    $('.js-qs').on ('click', '.js-answerclick', function(event){
+      console.log('shaboom');
       event.preventDefault();
       let ourButton = event.currentTarget;
       const paraID = parseInt($(ourButton).siblings('p').attr('id'));
@@ -46,11 +47,17 @@ const cateApp = (function () {
       }
       console.log(typeof userAnswer, typeof currentQuestion.userAnswer);
 
+      $(ourButton).closest('.js-qs').removeClass('question-section');
+
       if(userAnswer=== currentQuestion.userAnswer){
         console.log('correct answer!');
-        $(ourButton).closest('.question-section').html(goodJob(paraID));
+
+  
+        $(ourButton).closest('.js-qs').toggleClass('correct');
+        $(ourButton).closest('.js-qs').html(goodJob(paraID));
       } else {
-        $(ourButton).closest('.question-section').html(badJob(paraID));
+        $(ourButton).closest('.js-qs').toggleClass('wrong');
+        $(ourButton).closest('.js-qs').html(badJob(paraID));
       }
 
      
@@ -60,16 +67,16 @@ const cateApp = (function () {
   
   const goodJob = function (paraID) {
 
-    return `      <div class="correct">
+    return ` 
       <p id="${paraID}">Good job!  Shall we continue?</p>
 
     <button class="js-advanceQuestion">Yes Please!</button>
-    </div>
+   
       `;
   };
 
   const advanceQuestion = function () {
-    $('.question-section').on ('click', '.js-advanceQuestion', function(event){
+    $('.js-qs').on ('click', '.js-advanceQuestion', function(event){
       console.log('advance question');
       event.preventDefault();
 
@@ -77,8 +84,10 @@ const cateApp = (function () {
       const paraID = $(ourButton).siblings('p').attr('id');
       const advancedID = parseInt(paraID)+1;
       console.log(advancedID);
-      $(ourButton).closest('.question-section').html(makeQuestion(advancedID));
-  
+
+      $(ourButton).closest('.js-qs').removeClass('correct');
+      $(ourButton).closest('.js-qs').addClass('question-section');
+      $(ourButton).closest('.js-qs').html(makeQuestion(advancedID));
     });
   };
 
@@ -99,22 +108,24 @@ const cateApp = (function () {
 
   const badJob = function (paraID) {
     console.log('Im in bad!');
-    return `      <div class="wrong">
+    return `      
     <p id="${paraID}">Uh-oh! Wrong answer.  Would you like to try again?</p>
     <button class="js-returnQuestion">Yes Please!</button>
-    </div>
+
     `;
   };
   
   const returnQuestion = function () {
-    $('.question-section').on ('click', '.js-returnQuestion', function(event){
+    $('.js-qs').on ('click', '.js-returnQuestion', function(event){
       console.log('return Question triggered');
       event.preventDefault();
 
       let ourButton = event.currentTarget;
       const paraID = parseInt($(ourButton).siblings('p').attr('id'));
       console.log(paraID);
-      $(ourButton).closest('.question-section').html(makeQuestion(paraID));
+      $(ourButton).closest('.js-qs').removeClass('wrong');
+      $(ourButton).closest('.js-qs').addClass('question-section');
+      $(ourButton).closest('.js-qs').html(makeQuestion(paraID));
     });
   };
 

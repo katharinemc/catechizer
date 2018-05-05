@@ -9,6 +9,10 @@ html {
   min-height: 100%;
 }
 
+.allcontent{
+  margin: auto;
+}
+
 .answerBlock {
   margin: 3% auto;
 }
@@ -105,8 +109,16 @@ header {
   width: 100%;
   margin: 0 auto;
   padding: 5px;
+}
 
+header h1{
+  display: inline;
+}
 
+img {
+
+  max-height: 100px;
+ display: inline;
 }
 
 input[type=button] {
@@ -124,8 +136,7 @@ padding: 5%;
 
 
 .question-section {
-  height: 70%;
-/* background-color: #525252; */
+
 background-color: rgb(221, 221, 221);
 
 border: 1px solid black;
@@ -143,6 +154,11 @@ padding: 5%;
 .results {
   width: 66%;
   margin: 0 auto;
+}
+
+.row{
+  
+  width: 100%;
 }
 
 #word {

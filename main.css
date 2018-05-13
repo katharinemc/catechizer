@@ -208,11 +208,37 @@ body {
   font-size: 30px;
 }
 
-header h1 {
-  font-size: 3em;
+header {
+padding: 0;
+  font-size: 1em;
 }
 
 }
+
+@media screen 
+  and (min-device-width: 1200px) 
+{ 
+    header h1 {
+      font-size: 4em;
+    }
+    .question-section {
+      width: 66%;
+      margin: 3% auto;
+      padding: 3%;
+    }
+
+    .correct {
+      margin: 3% auto;
+    }
+
+    .wrong {
+      margin: 3% auto;
+    }
+
+    footer {
+      font-size: 1em;
+    }
+  }
 
 
 

@@ -101,6 +101,10 @@ header h1{
   display: inline;
 }
 
+.hidden {
+  display:none;
+}
+
 input[type=button] {
   display: inline;
  }
@@ -304,4 +308,3 @@ padding: 0;
 	border-radius: 50%;
 	background: white;
 }
-

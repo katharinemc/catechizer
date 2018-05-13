@@ -122,11 +122,20 @@ const cateApp = (function () {
     })
   };
 
+  const whyClick = function () {
+    $('#why').on('click', function () {
+  $(event.currentTarget).closest('.js-qs').html('<p>`Ipsum lorem lorem ipsum`</p>')
+
+    });
+  };
+
+
   const bindEventListeners = function () {
     initialClick()
     questionClicks()
     advanceQuestion()
     returnQuestion()
+    whyClick()
   };
 
   return {

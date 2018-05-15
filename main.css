@@ -59,10 +59,19 @@ box-shadow:         2px 4px 8px rgba(50, 50, 50, 0.75);
   filter: alpha(opacity=60); /* For IE8 and earlier */
 }
 
+
+.explanation p {
+ margin-bottom: 5%;
+ line-height: 1.2em;
+ font-size: .85em;
+}
+
 .explain {
   font-size: .75em;
   text-align: right;
+  margin: 0;
 }
+
 
 footer  {
   position: fixed;
@@ -88,6 +97,10 @@ footer li {
    margin: 5%;
 }
 
+ a {
+  color: black;
+  text-decoration: none;
+}
 
 
 header {
@@ -226,16 +239,18 @@ padding: 0;
       font-size: 4em;
     }
     .question-section {
-      width: 66%;
+      width: 55%;
       margin: 3% auto;
       padding: 3%;
     }
 
     .correct {
+      width: 55%;
       margin: 3% auto;
     }
 
     .wrong {
+      width: 55%;
       margin: 3% auto;
     }
 

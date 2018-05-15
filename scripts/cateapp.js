@@ -32,29 +32,24 @@ const cateApp = (function () {
       var userAnswer;
 
       if (currentQuestion.questionType === 'text') {
-        var userAnswerArray = new Array();
+        let userAnswerArray = new Array();
         $('.js-answerInput').each(function () {
           userAnswerArray.push($(this).val());
           userAnswer = userAnswerArray.join(', ').toLowerCase();
         }); 
       } else if (currentQuestion.questionType === 'select') {
-        let tempAnswer ='';
+        let userAnswerArray = new Array();
         $( '.js-answerInput option:selected' ).each(function () {
-          tempAnswer.concat($(this).val());
+          userAnswerArray.push($(this).val());
+          userAnswer = userAnswerArray.join(', ').toLowerCase();
         });
-        console.log(tempAnswer);
-         userAnswer = tempAnswer;
       }
-
-
 
       else if (currentQuestion.questionType === 'multiplechoice') {
         userAnswer = parseInt($('input[name=answergroup]:checked').val());
       }
-      console.log( userAnswer,  currentQuestion.userAnswer);
 
-      console.log(typeof userAnswer, typeof currentQuestion.userAnswer);
-
+      console.log(userAnswer, currentQuestion.answer)
       $(ourButton).closest('.js-qs').removeClass('question-section');
 
       if (userAnswer === currentQuestion.userAnswer) {  

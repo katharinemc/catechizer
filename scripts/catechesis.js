@@ -5,7 +5,7 @@ const catechesis = {
 
 
     {
-      id: 0,
+      id: 1,
       question: 'Who made the world?',
       fullAnswer: 'God',
       answerLiteral: `
@@ -27,23 +27,23 @@ const catechesis = {
       ,
       questionType: 'text'},
     {
-      id: 1,
+      id: 3,
       question: 'What is man?',
       fullAnswer: 'Man is a creature composed of body and soul, and made to the image and likeness of God.',
       answerLiteral:`
       <p>Man is a creature composed of <select class="js-answerInput" id="S1">
-          <option value="1">atoms</option>
-          <option value="2">matter</option>
-          <option value="3">body and soul</option>
-          <option value="4">thoughts</option>
+          <option value="a">atoms</option>
+          <option value="b">matter</option>
+          <option value="c">body and soul</option>
+          <option value="d">thoughts</option>
           </select>, and made to <select class="js-answerInput" id="S2">
-                  <option value="1">do good deeds</option>
-                  <option value="2">inherit the Earth</option>
-                  <option value="3">the image and likeness of God</option>
-                  <option value="4">his personal best</option>
+                  <option value="a">do good deeds</option>
+                  <option value="b">inherit the Earth</option>
+                  <option value="c">the image and likeness of God</option>
+                  <option value="d">his personal best</option>
                   </select>.</p>
      `,
-      userAnswer: '33',
+      userAnswer: 'c, c',
       questionType: 'select'
     },   
 

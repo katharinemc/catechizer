@@ -12,6 +12,9 @@
   margin-bottom: 10%;
 }
 
+.asker {
+  font-style: italic;
+}
 
 
 body {
@@ -121,6 +124,14 @@ header h1{
 input[type=button] {
   display: inline;
  }
+
+ input[type=text] {
+  font-size: .75em;
+  padding: 3%;
+  border-radius: 7px;
+  height: 2em;
+  border-color: gray;
+}
 
 main {
 background-image: url("./images/cathedral.jpg");

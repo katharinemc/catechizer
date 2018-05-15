@@ -83,7 +83,7 @@ const cateApp = (function () {
 
     return `
     <div class="regular">
-    <p id="${advancedID}">${newQuestion.question}</p>
+    <p class="asker" id="${advancedID}">${newQuestion.question}</p>
 
     <form id="userInputs">  
     ${newQuestion.answerLiteral}

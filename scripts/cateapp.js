@@ -28,7 +28,8 @@ const cateApp = (function () {
       let ourButton = event.currentTarget;
       const paraID = parseInt($(ourButton).siblings('p').attr('id'));
       let currentQuestion = catechesis.allQuestions.find(questions => questions.id === paraID);
-      let userAnswer;
+
+      var userAnswer;
 
       if (currentQuestion.questionType === 'text') {
         var userAnswerArray = new Array();
@@ -36,11 +37,23 @@ const cateApp = (function () {
           userAnswerArray.push($(this).val());
           userAnswer = userAnswerArray.join(', ').toLowerCase();
         }); 
+      } else if (currentQuestion.questionType === 'select') {
+        let tempAnswer ='';
+        $( '.js-answerInput option:selected' ).each(function () {
+          tempAnswer.concat($(this).val());
+        });
+        console.log(tempAnswer);
+         userAnswer = tempAnswer;
       }
+
+
 
       else if (currentQuestion.questionType === 'multiplechoice') {
         userAnswer = parseInt($('input[name=answergroup]:checked').val());
       }
+      console.log( userAnswer,  currentQuestion.userAnswer);
+
+      console.log(typeof userAnswer, typeof currentQuestion.userAnswer);
 
       $(ourButton).closest('.js-qs').removeClass('question-section');
 
@@ -85,7 +98,7 @@ const cateApp = (function () {
     <div class="regular">
     <p class="asker" id="${advancedID}">${newQuestion.question}</p>
 
-    <form id="userInputs">  
+    <form id="userInputs answerBlock">  
     ${newQuestion.answerLiteral}
     </form>
     <button type ="submit" class="js-answerclick">Submit Answer</button>
@@ -117,7 +130,7 @@ const cateApp = (function () {
 
   const whyClick = function () {
     $('#why').on('click', function () {
-      $(event.currentTarget).closest('.js-qs').addClass('explanation')
+      $(event.currentTarget).closest('.js-qs').addClass('explanation');
       $(event.currentTarget).closest('.js-qs').html(whyText);
 
     });

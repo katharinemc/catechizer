@@ -5,12 +5,12 @@ const catechesis = {
 
 
     {
-      id: 1,
+      id: 0,
       question: 'Who made the world?',
       fullAnswer: 'God',
-      answerLiteral: `<div class="answerBlock">
+      answerLiteral: `
       <input type="text" class="js-answerInput" >
-      </div>
+      
       `,
       userAnswer:'god',
       questionType: 'text'
@@ -21,40 +21,30 @@ const catechesis = {
       question: 'Who is God?',
       fullAnswer: 'God is the Creator of heaven and earth and of all things',
       userAnswer: 'heaven, earth, all things',
-      answerLiteral: `<div class="answerBlock">
+      answerLiteral: `
       God is the Creator of <input id="1" class="js-answerInput" type="text"> and <input id="2" class="js-answerInput"  type="text">, and of  <input id="3" class="js-answerInput"  type="text">.
-      </div>`
+      `
       ,
       questionType: 'text'},
     {
-      id: 3,
+      id: 1,
       question: 'What is man?',
       fullAnswer: 'Man is a creature composed of body and soul, and made to the image and likeness of God.',
-      answerLiteral: `<div class="answerBlock">
-      <p>Man is a creature composed of [ _________], and made to [ _________].</p>
-      <label for="answer1" class="container">
-      <input class="js-answerInput" type="radio" id="answer1" value="1" name="answergroup">
-      <span class="checkmark"></span>
-     atoms, do good deeds</label><br>
-    
-     <label for="answer2" class="container">
-     <input class="js-answerInput" type="radio" id="answer2" value="2" name="answergroup">
-     <span class="checkmark"></span>
-     matter, to inherit the Earth</label> <br>
-
-     <label for="answer3" class="container">
-     <input class="js-answerInput" type="radio" id="answer3" value="3" name="answergroup">
-     <span class="checkmark"></span>
-     body and soul, the image and likeness of God</label> <br>
-
-     <label for="answer4" class="container">
-     <input class="js-answerInput" type="radio" id="answer4" value="4" name="answergroup">
-     <span class="checkmark"></span>
-     thoughts, his personal best</label> <br>
-     </div>
+      answerLiteral:`
+      <p>Man is a creature composed of <select class="js-answerInput" id="S1">
+          <option value="1">atoms</option>
+          <option value="2">matter</option>
+          <option value="3">body and soul</option>
+          <option value="4">thoughts</option>
+          </select>, and made to <select class="js-answerInput" id="S2">
+                  <option value="1">do good deeds</option>
+                  <option value="2">inherit the Earth</option>
+                  <option value="3">the image and likeness of God</option>
+                  <option value="4">his personal best</option>
+                  </select>.</p>
      `,
-      userAnswer: 3,
-      questionType: 'multiplechoice'
+      userAnswer: '33',
+      questionType: 'select'
     },   
 
     {  id: 4,

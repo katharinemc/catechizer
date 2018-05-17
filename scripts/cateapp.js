@@ -5,6 +5,12 @@
 
 
 const cateApp = (function () {
+  $("#id_of_textbox").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#id_of_button").click();
+    }
+});
+
   let allQuestions = catechesis.allQuestions;
 
   const initialClick = function () {
@@ -23,7 +29,6 @@ const cateApp = (function () {
 
   const questionClicks = function () {
     $('.js-qs').on('click', '.js-answerclick', function (event) {
-      console.log('shaboom');
       event.preventDefault();
       let ourButton = event.currentTarget;
       const paraID = parseInt($(ourButton).siblings('p').attr('id'));

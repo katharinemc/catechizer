@@ -117,90 +117,67 @@ const catechesis = {
     }, 
     {
       id: 8,
-      question: 'What is God?',
-      fullAnswer: 'God is a spirit infinitely perfect.',
-      answerLiteral: 'God is a  <input type="text" class="js-answerInput" > infinitely perfect.',
-      userAnswer:'spirit',
+      question: 'What do we mean when we say that God is the Supreme Being?',
+      fullAnswer: 'When we say that God is the Supreme Being we mean that He is above all creatures, the self-existing and infinitely perfect Spirit.',
+      answerLiteral: 'When we say that God is the Supreme Being we mean that He <input type="text" class="js-answerInput" >, the self-existing and infinitely perfect Spirit.',
+      userAnswer:'is above all creatures',
       questionType: 'text'
     },
     {
       id: 1,
-      question: 'Had God a beginning?',
-      fullAnswer: 'God had no beginning; He always was and He always will be.',
-      answerLiteral: 'God had no beginning; He always was and <input type="text" class="js-answerInput">.'
-      ,
-      userAnswer:'He always will be',
-      questionType: 'text'
+      question: 'What is a spirit?',
+      fullAnswer: 'A spirit is a being that has understanding and free will, but no body, and will never die.',
+      answerLiteral: `A spirit is a being that has _______, but no body and will never die. <br>
+
+      <label for="answer1" class="container">
+      <input class="js-answerInput" type="radio" id="answer1" value="1" name="answergroup">
+             <span class="checkmark"></span>
+    understanding and free will</label><br>
+
+     <label for="answer2" class="container">
+     <input class="js-answerInput" type="radio" id="answer2" value="2" name="answergroup">
+            <span class="checkmark"></span>
+   supernatural abilities and telepathy</label> <br>
+
+     <label for="answer3" class="container">
+     <input class="js-answerInput" type="radio" id="answer3" value="3" name="answergroup">
+            <span class="checkmark"></span>
+    a soul</label> <br>
+
+     <label for="answer4" class="container">
+     <input class="js-answerInput" type="radio" id="answer4" value="4" name="answergroup">
+            <span class="checkmark"></span>
+    God's blessing</label> <br>
+     `,
+    userAnswer:1,
+      questionType: 'multiplechoice'
     },
     
     {
       id: 10,
-      question: 'Where is God?',
-      fullAnswer: 'God is everywhere',
-      answerLiteral: `<p>God is:</p> 
-                       
-      <label for="answer1" class="container">
-                      <input class="js-answerInput" type="radio" id="answer1" value="1" name="answergroup">
-                      <span class="checkmark"></span>
-                      on His throne in heaven</label><br>
-                 <label for="answer2" class="container">    
-                      <input class="js-answerInput" type="radio" id="answer2" value="2" name="answergroup">
-                      <span class="checkmark"></span>
-                      in the Blessed Sacrament</label> <br>
-  
-  <label for="answer3" class="container">
-                      <input class="js-answerInput" type="radio" id="answer3" value="3" name="answergroup">
-                      <span class="checkmark"></span>
-                      in everywhere</label> <br>
-  <label for="answer4" class="container">
-                      <input class="js-answerInput" type="radio" id="answer4" value="4" name="answergroup">
-                      <span class="checkmark"></span>
-                      our hearts</label> <br>'`,
-      userAnswer:3,
-      questionType: 'multiplechoice'
+      question: 'What do we mean when we say that God is self-existing?',
+      fullAnswer: 'When we say that God is self-existing we mean that He does not owe His existence to any other being.',
+      answerLiteral: 'We mean that He does not <input type="text" class="js-answerInput" > to any other being',
+      userAnswer:'owe his existence',
+      questionType: 'text'
     },
     
     {
       id: 11,
-      question: 'If God is everywhere, why do we not see Him?',
-      fullAnswer: 'We do not see God, because He is a pure spirit and cannot be seen with bodily eyes',
-      answerLiteral: `<p>We do not see God, because He is <select class="js-answerInput" id="S1">
-      <option value="a">imaginary</option>
-      <option value="b">a pure spirit</option>
-      <option value="c">invisible</option>
-      <option value="d">far away</option>
-      </select>;
-          and cannot be seen with bodily eyes
-  .</p>`,
-      userAnswer:'c',
-      questionType: 'select'
+      question: 'Who made the world?',
+      fullAnswer: 'God',
+      answerLiteral: '<input type="text" class="js-answerInput" >',
+      userAnswer:'god',
+      questionType: 'text'
     },
     {
       id: 12,
-      question: 'Does God see us?',
-      fullAnswer: ' God sees us and watches over us.',
-      answerLiteral: `<p>God sees us and</p> <br>
-                       
-      <label for="answer1" class="container">
-                      <input class="js-answerInput" type="radio" id="answer1" value="1" name="answergroup">
-                      <span class="checkmark"></span>
-                      guides our actions</label><br>
-                 <label for="answer2" class="container">    
-                      <input class="js-answerInput" type="radio" id="answer2" value="2" name="answergroup">
-                      <span class="checkmark"></span>
-                      judges us</label> <br>
-  
-  <label for="answer3" class="container">
-                      <input class="js-answerInput" type="radio" id="answer3" value="3" name="answergroup">
-                      <span class="checkmark"></span>
-                      watches over us</label> <br>
-  <label for="answer4" class="container">
-                      <input class="js-answerInput" type="radio" id="answer4" value="4" name="answergroup">
-                      <span class="checkmark"></span>
-                      hears our thoughts</label> <br>.`,
-      userAnswer:3,
-      questionType: 'multiplechoice'
-    }, 
+      question: 'Who made the world?',
+      fullAnswer: 'God',
+      answerLiteral: '<input type="text" class="js-answerInput" >',
+      userAnswer:'god',
+      questionType: 'text'
+    },
     
   
   

@@ -20,7 +20,7 @@
 
 
 body {
-  font-size: 22px;
+  width: 100%;
   font-family: 'Muli', sans-serif;
 }
 
@@ -64,7 +64,6 @@ box-shadow:         2px 4px 8px rgba(50, 50, 50, 0.75);
   filter: alpha(opacity=60); /* For IE8 and earlier */
 }
 
-
 .explanation p {
  margin-bottom: 5%;
  line-height: 1.2em;
@@ -76,6 +75,18 @@ box-shadow:         2px 4px 8px rgba(50, 50, 50, 0.75);
   text-align: right;
   margin: 0;
 }
+
+.explain a {
+  text-decoration: underline;
+}
+        .finalText{
+          text-align: center;
+          padding: 3%;
+      }
+      .finalText p{
+        margin-bottom: 5%;
+
+    }
 
 
 footer  {
@@ -106,10 +117,12 @@ form {
   margin-left: 3%;
 }
 
- a {
+header a {
   color: black;
   text-decoration: none;
 }
+
+
 
 
 header {
@@ -132,6 +145,7 @@ input[type=button] {
  }
 
  input[type=text] {
+   max-width: 100%;
   font-size: .75em;
   margin: .5% 0;
   padding: 3%;
@@ -141,14 +155,25 @@ input[type=button] {
 }
 
 main {
-background-image: url("./images/cathedral.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
 margin: auto;
 min-height: 100%;
 }
 
+.sistine {
+  background-image: url("./images/heaven.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+  
+}
+
+.cathedral {
+  background-image: url("./images/cathedral.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+
+}
 
 .question-section {
 background-color: rgb(221, 221, 221);
@@ -215,16 +240,19 @@ select {
 
 footer {
   font-family: 'Rasa', serif;
-  background-color: #838383;
 }
 
 footer a {
   color: black;
 }
 
+.gray {
+  background-color: #838383;
+}
+
 header {
   font-family: 'Cormorant SC', serif;
-  background-color: #b4b4b4;
+  background-color: transparent;
   border: #838383;
 }
 
@@ -251,12 +279,18 @@ padding: 0;
 @media screen 
   and (min-device-width: 1200px) 
 { 
+  body {font-size: 30px}
     header h1 {
       font-size: 4em;
     }
+
+    header{
+      padding: 1%;
+    }
+    }
     .question-section {
       width: 55%;
-      margin: 3% auto;
+      margin: 3% auto 0 auto;
       padding: 3%;
     }
 

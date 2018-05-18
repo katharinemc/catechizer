@@ -5,11 +5,6 @@
 
 
 const cateApp = (function () {
-  $("#id_of_textbox").keyup(function(event) {
-    if (event.keyCode === 13) {
-        $("#id_of_button").click();
-    }
-});
 
   let allQuestions = catechesis.allQuestions;
 
@@ -77,17 +72,30 @@ const cateApp = (function () {
 
   const advanceQuestion = function () {
     $('.js-qs').on('click', '.js-advanceQuestion', function (event) {
-      console.log('advance question');
       event.preventDefault();
 
       let ourButton = event.currentTarget;
       const paraID = $(ourButton).siblings('p').attr('id');
       const advancedID = parseInt(paraID) + 1;
-      console.log(advancedID);
+      console.log('length is', catechesis.allQuestions.length, 'id is', paraID);
 
       $(ourButton).closest('.js-qs').removeClass('correct');
       $(ourButton).closest('.js-qs').addClass('question-section');
-      $(ourButton).closest('.js-qs').html(makeQuestion(advancedID));
+
+      if(parseInt(paraID) === catechesis.allQuestions.length){
+        $(ourButton).closest('body').find('header').removeClass('gray');
+
+        $(ourButton).closest('body').find('footer').removeClass('gray');
+        $(ourButton).closest('header').removeClass('gray');
+        $(ourButton).closest('main').removeClass('cathedral');
+        $(ourButton).closest('body').addClass('sistine');
+        $(ourButton).closest('.js-qs').html(finalText);
+     
+      } else {
+        $(ourButton).closest('.js-qs').html(makeQuestion(advancedID));
+      }
+
+ 
     });
   };
 
@@ -136,9 +144,9 @@ const cateApp = (function () {
     });
   };
 
-  const whyText =  `<p>The Baltimore Catechism was widely used in Catholic schools from its first publication in 1885 until the mid-1960s.</p><p>  Generations of Catholics were familiar with it's question and answer format and concise approach to complex philosophical questions.</p>
+const finalText = '<span class="finalText"><p>Congratulations!</p> <p>You have correctly answered all of Catechizer\'s current questions.</p><p>If you enjoyed this project or have suggestions or feedback, please drop us a line.</p></span>';
 
-  <p>This app is intended to share that tradition with a new audience for education and entertainment.</p><p>  The questions are primarily drawn from the 1891 version of the Baltimore Catechism #3. In some places, answers may be a a short phrase.  Please note: spelling, word choice, and word order count.  Additional questions will be added as time permits.</p><br><br>
+  const whyText =  `<p>The Baltimore Catechism was widely used in Catholic schools from its first publication in 1885 until the mid-1960s.</p><p>  Generations of Catholics were familiar with it's question and answer format and concise approach to complex philosophical questions.</p><p>This app is intended to share that tradition with a new audience for education and entertainment.</p><p>  The questions are primarily drawn from the 1891 version of the Baltimore Catechism #3. In some places, answers may be a a short phrase.  Please note: spelling, word choice, and word order count.  Additional questions will be added as time permits.</p><br><br>
   <p class="explain"><a href="./">Back</a></p>
   `;
 

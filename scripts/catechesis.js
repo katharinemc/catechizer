@@ -200,8 +200,114 @@ const catechesis = {
                       hears our thoughts</label> <br>.`,
       userAnswer:3,
       questionType: 'multiplechoice'
+    },  {
+      id: 13,
+      question: 'Does God know all things?',
+      fullAnswer: 'God knows all things, even our most secret thoughts, words, and actions.',
+      answerLiteral: `<p>God knows all things, even our _______, words, and actions.</p> <br>
+                       
+      <label for="answer1" class="container">
+                      <input class="js-answerInput" type="radio" id="answer1" value="1" name="answergroup">
+                      <span class="checkmark"></span>
+                      sins</label><br>
+                 <label for="answer2" class="container">    
+                      <input class="js-answerInput" type="radio" id="answer2" value="2" name="answergroup">
+                      <span class="checkmark"></span>
+                      most secret thoughts</label> <br>
+  
+  <label for="answer3" class="container">
+                      <input class="js-answerInput" type="radio" id="answer3" value="3" name="answergroup">
+                      <span class="checkmark"></span>
+                      plans for the future</label> <br>
+  <label for="answer4" class="container">
+                      <input class="js-answerInput" type="radio" id="answer4" value="4" name="answergroup">
+                      <span class="checkmark"></span>
+                      dreams</label> <br>.`,
+      userAnswer:2,
+      questionType: 'multiplechoice'
+    }, {
+      id: 14,
+      question: 'Can God do all things?',
+      fullAnswer: 'God can do all things and nothing is hard or impossible for Him.',
+      answerLiteral: `<p>God can do all things and nothing is _______.</p> <br>
+                       
+      <label for="answer1" class="container">
+                      <input class="js-answerInput" type="radio" id="answer1" value="1" name="answergroup">
+                      <span class="checkmark"></span>
+                      impossible with His aid</label><br>
+                 <label for="answer2" class="container">    
+                      <input class="js-answerInput" type="radio" id="answer2" value="2" name="answergroup">
+                      <span class="checkmark"></span>
+                      hard or impossible for Him</label> <br>
+  
+  <label for="answer3" class="container">
+                      <input class="js-answerInput" type="radio" id="answer3" value="3" name="answergroup">
+                      <span class="checkmark"></span>
+                      done outside His will</label> <br>
+  <label for="answer4" class="container">
+                      <input class="js-answerInput" type="radio" id="answer4" value="4" name="answergroup">
+                      <span class="checkmark"></span>
+                      unplanned by Him</label> <br>.`,
+      userAnswer:2,
+      questionType: 'multiplechoice'
+    }, {
+      id: 15,
+      question: 'Is God just, holy, and merciful?',
+      fullAnswer: 'God is all just, all holy, all merciful, as He is infinitely perfect.',
+      answerLiteral: '<p>God is all just, all holy, all merciful, as He is    <input type="text" class="js-answerInput" ></p>',
+      userAnswer:'infinitely perfect',
+      questionType: 'text'
+    }, {
+      id: 16,
+      question: 'Is there but one God?',
+      fullAnswer: 'God is all just, all holy, all merciful, as He is infinitely perfect.',
+      answerLiteral: `<label for="answer1" class="container">
+      <input class="js-answerInput" type="radio" id="answer1" value="1" name="answergroup">
+      <span class="checkmark"></span>
+      Yes; there is but one God</label><br>
+ <label for="answer2" class="container">    
+      <input class="js-answerInput" type="radio" id="answer2" value="2" name="answergroup">
+      <span class="checkmark"></span>
+     No; there is God the Father, Jesus Christ, and the Holy Spirit.</label> <br>`,
+      userAnswer: 1,
+      questionType: 'multiplechoice'
     }, 
-    
+    {
+      id: 17,
+      question: 'Why can there be but one God?',
+      fullAnswer: 'There can be but one God, because God, being supreme and infinite, cannot have an equal.',
+      answerLiteral: '<p>There can be but one God, because God, being supreme and infinite, cannot have <input type="text" class="js-answerInput" > </p>',
+      userAnswer: 'an equal',
+      questionType: 'text'
+    }, {
+      id: 18,
+      question: 'How many Persons are there in God?',
+      fullAnswer: 'In God there are three Divine Persons, really distinct, and equal in all things-the Father, the Son, and the Holy Ghost.',
+      answerLiteral: '<p>In God there are three Divine Persons, really distinct, and  <input type="text" class="js-answerInput" > -the Father, the Son, and the Holy Ghost.</p>',
+      userAnswer: 'equal in all things',
+      questionType: 'text'
+    }, {
+      id: 19,
+      question: 'Is the Father God?',
+      fullAnswer: ' The Father is God and the first Person of the Blessed Trinity.',
+      answerLiteral: '<p> The Father is God and the first Person of the <input type="text" class="js-answerInput" > </p>',
+      userAnswer: 'Blessed Trinity',
+      questionType: 'text'
+    },  {
+      id: 20,
+      question: 'Is the Son God?',
+      fullAnswer: ' The Son is God and the second Person of the Blessed Trinity.',
+      answerLiteral: `<label for="answer1" class="container">
+      <input class="js-answerInput" type="radio" id="answer1" value="1" name="answergroup">
+      <span class="checkmark"></span>
+      Yes.</label><br>
+ <label for="answer2" class="container">    
+      <input class="js-answerInput" type="radio" id="answer2" value="2" name="answergroup">
+      <span class="checkmark"></span>
+     No; the Father is God</label> <br>`,
+      userAnswer: 1,
+      questionType: 'multiplechoice'
+    }
   
   
   
